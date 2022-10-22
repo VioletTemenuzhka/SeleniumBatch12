@@ -1,0 +1,39 @@
+Selenium class 11
+
+Actions class:
+If regular click doesn't work you can use the alternative way of having Actions class click method
+
+Upload documents
+In order to upload documents using selenium we simply do .sendKeys(filePath);
+
+If sendKeys does not work, you can use Robot class. Robot class is a library that comes from java. We can perform actions
+on a windows based applications
+
+JavaScriptExecutor
+It is a library in Selenium which can be executed in different programing languages(jav, c#, python etc)
+it is an interface
+By using it we'll be able to perform different actions like:
+    - click on an element --> last option if click() and actions click() don't work
+            js.executeScript("arguments[0].click()",loginButton);
+    - scroll up and dow the page
+    - scroll to a specific element
+    - refresh the page
+    - opening a new tab
+    - highlighting an element
+
+To use the JSExecutor we need first to create an object indirectly or to downcast to the driver like so:
+     JavascriptExecutor js = (JavascriptExecutor)driver;
+     js.executeScript("String script",variable/object/noVariableIfScrollingUpDown);
+Built-in Scripts for JSExecutor:
+Syntax:
+    - click on an element --> js.executeScript("arguments[0].click()",webElement);
+            This approach is used when .click(); and Actions click(); don't work
+    - scroll up the page --> js.executeScript("window.scrollBy(0, -500)"); in () we're passing the pixels and always start from 0
+    - scroll down the page --> js.executeScript("window.scrollBy(0, 500)");
+    - scroll to a specific element --> js.executeScript("arguments[0].scrollIntoView(true)",locationOfTheElement);
+            locationOfTheElement is better to store in a variable/WebElement
+    - highlighting an element --> js.executeScript("arguments[0].style.backgroundColor='desired color'", webElementVariable)
+    - opening a new tab --> js.executeScript("window.open();"); --> open a blank tab
+                            js.executeScript("window.open('urlOfTheWebsiteToBeOpen');");
+    - refresh the page -->
+

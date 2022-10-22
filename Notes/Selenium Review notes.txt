@@ -1,0 +1,39 @@
+What is html
+What is the purpose of the attributes? - multiple purposes
+- decide the properties of that particular thing
+- helping to identify the particular element uniquely
+
+What is WebElement? - anything on the webpage
+Why do we need to locate and access them? - to check functionality, to test them
+How do we locate them? - by lacators
+
+
+---------- 03/31/2022 - Review Class 02 ---------
+
+------------- Radio Buttons ----------------
+
+unique access to webElements
+We can use multiple attributes to get a unique path
+    Those operators can be used in Xpath and in css selector maybe
+    use "and" operator
+    we can use "or" operator also
+    Example: //input[@name='optradio'and@value='Female']
+    this also can be a path to find the element, if it is working
+
+    //div[contains(text(),'Radio Button Demo')]//parent::div//label[contains(text(),'Female')]//input
+
+
+---------- 04/14/2022 - Review Class 04 ---------
+
+Task from class 8
+go to https://the-internet.herokuapp.com/dynamic_controls
+click on checkbox and click on remove
+verify the text
+click on enable verify the textbox is enabled
+enter text and click disable
+verify the textbox is disabled
+
+WindowHandles
+Window handle is the unique id of the web page/tab
+
+---------- 04/21/2022 - Review Class 05 ---------

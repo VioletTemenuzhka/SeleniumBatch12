@@ -1,0 +1,51 @@
+*When there is an attribute that has a numeric value, that will most likely change in the future, so use different attribute
+*If all attributes have numeric values, create Xpath, or go for advanced xpath
+
+CSS selector (cascading style sheet)
+another way of locating elements on the web page
+can start wherever we want
+    Syntax:
+    tagname[attribute = 'attribute value']
+    Example: button[type = 'submit']
+
+CSS does not give an opportunity to locate the element by its text
+
+Shortcuts for CSS:
+"." --> for ClassName
+    Syntax: tagname.classNameValue
+    Example: input.button
+
+"#" --> for ID
+    Syntax: tagname#IDValue
+    Example: input#twotabsearchtextbox
+
+Actual Syntax/ no shortcuts for CSS:
+* --> star symbol represent contains() method in CSS
+    Syntax: tagname[attribute *= 'attribute value']
+    Example: input[placeholder *= 'Email']
+
+^ --> (Circumflex/Caret) symbol represents starts with method
+    Syntax: tagname[attribute ^= 'starting attribute value']
+    Example: tagname[attribute ^= 'attribute value']
+
+$ --> Symbol represents ends with method in CSS
+    Syntax: tagname[attribute $= 'ending attribute value']
+    Example: img[src $= 'syntax.png']
+
+Xpath VS CSS
+-- CSS cannot lacate the elements by text wheres Xpath can
+-- no ends-with method in xpath
+-- CSS finds the elements faster than Xpath
+-- CSS has shortcuts, xpath doesn't have
+-- no advanced CSS
+
+WebElement Comands:
+consist of several methods where we can perform an action and get the element state on the webpage
+isEnabled() -- boolean
+isDisplayed() -- boolean
+isSelected() -- boolean
+clear() -- void method (doesn't return anything) - clears the text fields
+getText() -- getting String value
+getAttribute() -- String value
+submit() -- void
+

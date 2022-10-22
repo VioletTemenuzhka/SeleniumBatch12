@@ -1,0 +1,44 @@
+Selenium class 7
+
+Handling multiple windows (tabs):
+In order to handle multiple windows we'll be using 2 methods:
+getWindowHandle() - returns String value; gives us a single unique ID of the current tab
+getWindowHandles() - returns a Set of Strings, because it has no duplicate
+    We have to create an Iterator in order to work with the different tabs and windows.
+    If we have more tha one window(tab) is always good to create an Iterator and iterate through
+
+WindowHandle:
+unique ID that holds the address of the window or a tab. It is always different, because every session of a web browser
+is unique. It is approximately 48 alphanumeric character ID. We'll be not able to locate it manually. The only way to
+locate it is with Selenium
+mainHandle
+childHandle - we need to switch the Selenium's focus to it in order to interact with it
+Even though you visually see the page, you may not be able to interact with it unless you switch Selenium's focus to it
+
+* We can open as many tabs or windows as we need, but unless we switch the focus to certain page, selenium's focus is on main.
+Usually we're working with two tabs
+
+How to keep track on what we're closing?
+
+Synchronization:
+The process of bringing the speed of 2 or more components to the same level.
+In this case we're printing our script and page load to the same speed level
+
+Thread.sleep() -- static wait / unconditional wait (we give the time) You don't know when the element will be located.
+Need to use it everytime before locate an element
+
+Types of Selenium waits:
+1. Implicit wait:
+    Tells the webdriver to wait for certain amount of time before throwing an exception. It will only be written once
+and will be applied to the whole session of the execution. Implicit wait is a global wait. Usually it is set for 20 seconds
+Implicit wait works with findElement() method. It waits for the elements to be located on the page.
+If the element is found in the given time, remaining time will be ignored and the script will continue the execution.
+If the element is not found in the given time, ONLY then you will get an exception
+
+    Syntax/manage the wait:
+     driver.manage().timeouts().implicitlyWait()
+     .implicitlyWait() -- need to pass long time and Timeunit unit
+     Example: driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+
+2. Explicit wait:
+3. Fluent wait - not really used nowadays

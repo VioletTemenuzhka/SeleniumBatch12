@@ -1,0 +1,43 @@
+
+----------- Class 11 --------------
+HW
+open new browser
+open a new tab
+navigate to a different URL on a new tab / use .switchTo(); and window handles
+
+HW: TestNG and use assertions / can use the existing Selenium project since didn't work with TestNG yet
+TC 1: HRMS blank password validation
+Navigate to "http://hrm.syntaxtechs.net/humanresources/symfony/web/index.php/auth/login"
+Enter valid username and leave password field empty
+Click on login button
+Verify error message with text "Password cannot be empty" is displayed
+
+TC 2: HRMS blank username and password validation
+Navigate to "http://hrm.syntaxtechs.net/humanresources/symfony/web/index.php/auth/login"
+Leave username and password field empty
+Click on login button
+Verify error message with text "Username cannot be empty" is displayed
+
+TC 2: HRMS invalid credentials validation
+Navigate to "http://hrm.syntaxtechs.net/humanresources/symfony/web/index.php/auth/login"
+Enter valid username and wrong password
+Click on login button
+Verify error message with text "Invalid credentials" is displayed
+
+TC:4 --> do on selenium project
+Go to http://www.uitestpractice.com/
+interact with drag and drop, iframe, double click
+click on home
+delete one user from the table
+go to the next link
+click on the ajax link and wait for the text
+verify that the text is displayed
+go to Form
+and fill out everything
+go to widgets
+upload any file and verify it is uploaded
+go to actions and perform all the necessary actions
+go to SwitchTo
+work with alerts and frames
+go to select
+perform actions on all dropdowns

@@ -1,0 +1,17 @@
+Selenium Class 9
+
+Pagination - Tables divided into several pages, the navigation bar is called Pagination
+
+Calendars:
+    Also known as day pickers
+    All calendars will include tables
+
+    StaleElementReferenceException - the worse exception; you don't know where is the error. Element was fine before
+    now something changed
+     interview question of the day --> stale element reference exception.
+    *anything causes reload/refresh the whole page (ex: click to nextpage);
+    *webdriver is not able to retrieve the elements of the page we already located because page is reloaded/refreshed (not table itselfs, whole page)
+    *the elements we located are changed. selenium forgets about them. because the referenced web element is no longer attached to the DOM.
+    *if we want to avoid from that exception on refresh/reload situation, we need to get/locate every element after each refresh/reload again.
+    *we can use loop so that we can get webelements every time we are going through the loop.
+

@@ -1,0 +1,16 @@
+Selenium class 12
+
+POM - Page Object Model
+In order to have POM design we need couple different packages (4 to be specific)
+POM is design pattern which allows us to enhance our test maintenance and reduce code duplication
+  Advantages:
+  1) Code reusability
+  2) Code maintainability
+  3) Object repository
+  4) Readability
+
+How to implement?
+POM has 2 different ways to be implemented:
+ * PageFactory is a class which allows us to interact with stored elements inside each class
+    1. POM without the PageFactory
+    2. POM with PageFactory

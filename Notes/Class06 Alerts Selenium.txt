@@ -1,0 +1,61 @@
+Selenium Class 6
+
+WE START AUTOMATION AFTER WE DO THE MANUAL TESTING!!!!
+
+Alerts:
+Alert is pop up message. Alert takes a complete focus of our main page (that we are working on)
+We cannot proceed further until it is handled
+
+There are 3 types of Alerts:
+    1. Web based alerts / html alerts - we can simply inspect and perform needed actions like a normal WebElement
+    2. JavaScript alert - not a part of the website - we can handle these alerts by using switchTo method
+                                                      we CANNOT inspect
+       (most of the time we'll handle Javascript alerts)
+    3. Windows based alerts - we cannot handle with Selenium
+
+Types of JavaScript (JS) Alerts:
+    1) Simple alert - we only have one option (the button OK)
+    2) Confirmation alert - 2 options; either CANCEL or OK
+    3) Prompt alert - with a text box; enter the text and then click OK or don't enter any text and click CANCEL
+
+To handle JavaScript alerts we have 4 methods:
+    1. accept() --> click OK
+    2. dismiss() --> click CANCEL/ if the cancel button is not available, it'll click on OK button
+    3. getText() --> get the text of the alert
+    4. sendKeys() --> enter text in the textbox
+
+    Always we have to import the Alert interface from the selenium library
+         public interface Alert {
+            void dismiss();
+            void accept();
+            String getText();
+            void sendKeys(String keysToSend);
+
+We always have to have an object of the Alert interface to handle the alerts.
+We can have only one object and reassign it for each alert. No need of creating multiple objects
+
+getTex() is coming from 2 different interfaces (Alert and WebElement)
+same name but different functionality
+
+Authentication alerts - pop-ups where we need to enter valid credentials in order to enter the sait
+In order to handle those alerts, we have to pass valid credentials in the url like so:
+    Syntax: username:password@
+    Example: Username is admin and password is admin "https://admin:admin@the-internet.herokuapp.com/basic_auth";
+
+Frames
+    Frame is a separate and individual window in our webpage completely independent of the main page. Frames allow developers
+to represent multiple views on one page. Sometimes they are hidden.
+To interact with frame we need to switch the focus of Selenium to the frame and after we need to switch the focus to the
+main page
+
+3 Methods to interact with frames:
+    .frame() methods --> they are overloaded methods
+    1. by index
+    2. by name or ID
+    3. by WebElement
+
+in alerts - switch to alert manually and switch automatically back
+in frames - switch to frame manually and switch manually bach to the main page
+
+Interview question:
+How do you handle Alerts in Selenium? - We handle Alerts by using Alert interface

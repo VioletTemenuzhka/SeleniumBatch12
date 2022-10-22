@@ -1,0 +1,82 @@
+Selenium Class 1
+
+What is software testing?
+-- identifying the correctness and quality of the application
+- testers find issues, developers fix them
+
+How many ways can we actually test?
+-- manual - done 1st before the automation. jira, task cases, step-by-step procedure
+-- automation
+
+When do we go for automation?
+-- after manual testing is passed
+-- when environment (test environment) is stable
+-- analyze our test suite and choose our automation tools
+
+What automation tools do we know about?
+-- Selenium, TestNG, Cucumber, Katalon Studio, UFT/QTP - for web applications
+- Appium - is for mobile apps
+
+Level of testing
+-- Unit testing - performed by the devs
+-- Integration testing - performed by devs mostly
+-- Acceptance testing - performed by the clients
+-- System testing - performed by testers
+
+Types of testing?
+-- Functional testing - performing to see the functionality of each and every application we're working on
+-- NON-Functional testing
+    Performance testing - how the system works, what is the performance time
+    Security testing - we're testing if it is hackable, checking firewalls
+
+
+What is Selenium?
+- why named "Selenium" - The person who invented it wanted to destroy the other tool, called mercury
+-- a set of tools which helps us to automate web applications. It is mainly used
+to perform functional testing
+
+What is Selenium used for?
+-
+
+Selenium has 4 Components:
+Selenium IDE --> integrated development environment
+Selenium Grid --> Firefox plugin
+Selenium WebDriver --> most updated tool
+Selenium RC --> Remote control
+
+What is selenium webdriver?
+Open source automation tool which allows us to perform actions on a web applications
+WebDriver is an Interface (where we'll be getting all the build-in methods and applying our actions for web applications)
+
+Advantages of Selenium WebDriver:
+-- Open source (free)
+-- works with different browsers and supports cross browsing testing
+-- works with different programming languages --> Java, javaScript, Ruby, Python
+-- OS independent --> iOS, Windows, Linux
+
+Disadvantages of Selenium WebDriver:
+-- Cannot test desktop applications
+-- no technical support
+-- no built-in reports, no feedback
+-- cannot test captchas(is security), images or videos (are design) - done by manual testing only
+** captcha - a program or system intended to distinguish human from machine input,
+   typically as a way of thwarting spam and automated extraction of data from websites.
+
+get() vs navigate().to()
+-- navigate can go back and forward and refresh
+-- get() will wait for the page to fully load whereas navigate() will not
+-- get() will not keep the history of the browser whereas navigate() will
+
+close() vs quit()
+-- close() will close the current tab
+-- quit() will quit the whole browser
+
+fullscreen() vs maximize()
+-- maximize() will maximize the browser and you will still be able to see the control panel(back and forward, bookmarks)
+-- fullscreen() will maximize the whole application
+
+
+*** If you get an error  saying that
+    " driver executable doesn't exist"
+    U need to check your path to driver in system.property()
+    Remember  it is also case-sensitive

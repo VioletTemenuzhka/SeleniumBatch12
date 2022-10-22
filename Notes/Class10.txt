@@ -1,0 +1,38 @@
+Selenium Class 10
+
+How to handle Calendars:
+1. Click on the calendar
+2. Locate the month and get its text
+3. If the desired text is not visible --> keep clicking on next and updating the text of the month (in the while loop)
+4. as soon as we found our desired mont --> grab all the cells from the table data (store it in a list)
+5. Loop through the cells
+6. once the cell value is matched our condition --> click on the matched date
+
+Taking screenshots while using Selenium
+Why do we need screenshots in testing?
+    Screenshots are very important in order to prove that our test cases covered certain functionality.
+In Selenium in order to take screenshots we'll be using TakesScreenshot interface
+Use try/catch in java
+
+ TakesScreenshot ts = (TakesScreenshot) driver; //downcasted to the driver, because driver is the complete focus of the browser
+ File srcFile = ts.getScreenshotAs(OutputType.FILE);//mention output type; getting a file in return
+ //line 23 assign the getScreenshotAs() method to an object of the File class --> the screenshot is taken
+
+ // whenever copyFile() gets executed it may throw an exception --> more actions and surrounded with try/catch
+     try {
+      FileUtils.copyFile(srcFile,new File("screenshots/SmartBear/adminLogin111.png"));
+      } catch (IOException e) { //IOException
+      e.printStackTrace();
+        }
+       // screenshots/SmartBear/ --> these 2 folders will be created automatically and it will store it inside our project
+       // adminLogin.png --> name of the file can be anything, extension have to be .png or .jpg
+         // if we use the same name over and over, it's going to overwrite every time on the previous one
+
+
+ Actions class:
+ is given by selenium to capture keyboard and mouse events such as:
+     move to element
+    drag and drop
+    double click
+    right click
+

@@ -1,0 +1,83 @@
+XPath
+Why do we need Xpath and Css Selector?
+-- developers will not provide all the locators in htlm
+-- by using Xpath and Css we can identify elements with any given attributes
+
+What is Xpath?
+-- Xpath is like query language witch helps us to identify elements uniquely on the web page
+
+Types of Xpath:
+    Absolute Xpath --> always starts from the starting note in html (which is html)
+                   --> always starts with single slash (/)
+                        e.g. /html/body/div/div/div
+    * not preferable to use:
+            - complicated
+            - time-consuming
+            - if something changes then it messes up
+
+    Relative Xpath --> can start from any node in html
+                   --> always starts with double slash (//)
+    Syntax for relative Xpath:
+    case-sensitive and has to be exact with spaces!!
+    //tagname[@attribute = 'attribute value']
+    e.g. //input[@id = 'email']
+
+    Identifying elements by its text: (this is also relative Xpath)
+    //tagname[text() = 'text value']
+    e.g. //a[text() = 'Create new account']
+    e.g. //h2[text() = 'Connect with friends and the world around you on Facebook.']
+
+    Identifying elements by using contains method
+    //tagname[contains(@attribute, 'partial attribute value')]
+    e.g. //input[contains(@placeholder, 'Email')]
+
+    Identifying elements by using partial starting value starts-with
+    //tagname[starts-with(@attribute, 'partial starting attribute value')]
+    e.g. //button[starts-with(@data-testid, 'royal')]
+    **ends-with was used in xpath 1.0, we are using 2.0 and this method is not available
+
+Tags - what do they mean?
+<div> -- division
+<img> -- image
+<h>   -- heading (sometimes it can change when there is a number for example: <h4> ; <h1>)
+<p>   -- paragraph
+<li>  -- list
+<ul>  -- unordered list
+<ol>  -- ordered list
+<br>  -- breaking line
+
+When trying to locate an element by the heading, sometimes it can change its name.
+To prevent errors use: wild card (*) Works only in xpath. In this wild card you can pass one single symbol (the * Symbol)
+and it will give you the opportunity to locate any element inside the HTML or inside the DOM
+    Example: //*[contains(text(),'Welcome')]
+                in url: http://syntaxprojects.com/dynamic-elements-loading.php after clicking on start button
+
+When the element is not unique, try to locate it by using different attribute!!
+
+    Advanced Xpath - we use it when we cannot find the element uniquely
+based on parent and child and sibling relationship (same level vertically)
+
+    Identify elements by following sibling
+    //tagname[@attribute = 'attribute value']/following-sibling::tagname
+    e.g. //input[@id = 'calFromDate']/following-sibling::img
+
+     Identify elements by preceding sibling
+     //tagname[@attribute = 'attribute value']/preceding-sibling::tagname
+     e.g. //span[text() = '& Orders']/preceding-sibling::span
+
+    Identify elements by parent
+    //tagname[@attribute = 'attribute value']/parent::tagname
+    e.g. //span[text() ='& Orders']/parent::a
+
+    Identify elements by child
+        //tagname[@attribute = 'attribute value']/child::tagname
+        e.g. //div[@id = 'profile-pic']/child::h1
+
+    Identify elements by its ancestor (anything above the parent is considered to be ancestor)
+        //tagname[@attribute = 'attribute value']/ancestor::tagname
+        e.g. //input[@id = 'email']/ancestor::form
+
+Finding an element by indexing
+(//tagname[@attribute = 'attribute value'])[index] - absolutely not preferable, because everything inbetween  can be messy
+
+In XPATH indexing starts from 1
